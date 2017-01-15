@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rack (1.6.5)
+    rack-proxy (0.6.0)
+      rack
+    rpi_gpio (0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rack (~> 1.6.5)
+  rack-proxy
+  rpi_gpio
+
+BUNDLED WITH
+   1.13.7
