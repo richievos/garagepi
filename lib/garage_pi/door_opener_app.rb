@@ -6,7 +6,7 @@ module GaragePi
     def call(env)
       GaragePi::DoorOpener.new.press_button
 
-      [ '200', { 'Content-Type' => 'application/json' }, ['']]
+      [ '302', { 'Location' => '/?toggled=true' }, ['']]
     end
   end
 end
