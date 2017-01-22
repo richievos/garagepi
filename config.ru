@@ -2,7 +2,7 @@ require 'garage_pi/authentication_middleware'
 require 'garage_pi/door_opener_app'
 require 'garage_pi/image_proxy'
 
-use GaragePi::AuthenticationMiddleware, password: ENV["password"] || "defaultpass"
+use GaragePi::AuthenticationMiddleware, password: ENV["GARAGE_PI_PASSWORD"] || "defaultpass"
 
 use Rack::Static, :urls => { "/" => "index.html",
                              "/css/index.css" => "/css/index.css",

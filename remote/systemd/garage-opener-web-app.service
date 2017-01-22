@@ -1,0 +1,14 @@
+[Unit]
+Description=A garage door opener app
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/garagepi
+User=pi
+Environment=GARAGE_PI_PASSWORD=<FILL_ME_IN>
+ExecStart=/usr/local/bin/bundle exec rackup -I lib -p 6868 -o 0.0.0.0 config.ru
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
