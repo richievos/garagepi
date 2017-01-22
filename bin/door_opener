@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require_relative 'lib/garage_pi/door_opener'
+require_relative '../lib/garage_pi/door_opener'
 
 GaragePi::DoorOpener.new.press_button
