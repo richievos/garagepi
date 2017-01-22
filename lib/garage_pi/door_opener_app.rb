@@ -6,8 +6,7 @@ module GaragePi
     def call(env)
       GaragePi::DoorOpener.new.press_button
 
-      [ '302', { 'Location' => '/?toggled=true' }, ['']]
+      [ 302, { 'Location' => '/?toggled=true' }, ['']]
     end
   end
 end
-
