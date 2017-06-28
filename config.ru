@@ -6,6 +6,9 @@ use GaragePi::AuthenticationMiddleware, password: ENV["GARAGE_PI_PASSWORD"] || "
 
 use Rack::Static, :urls => { "/" => "index.html",
                              "/css/index.css" => "/css/index.css",
+                             "/css/slide-to-submit.css" => "/css/slide-to-submit.css",
+                             "/js/slide-to-submit.js" => "/js/slide-to-submit.js",
+                             "/js/slider.js" => "/js/slider.js",
                              "/login" => "login.html" },
                   :root => "public",
                   :index => "index.html"

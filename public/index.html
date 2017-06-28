@@ -8,6 +8,10 @@
     <title>GaragePi</title>
   </head>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -17,15 +21,26 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="/css/index.css">  
+  <link rel="stylesheet" href="/css/slide-to-submit.css">
+  <script src="/js/slide-to-submit.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+      $('.slide-submit').slideToSubmit();
+  })
+  </script>
 
   <body>
     <div class="container-fluid">
       <h1>Door Opener</h1>
-      <a class="btn btn-default btn-block door-button" type="submit"
-         href="/toggle">
-         Press
-      </a>
+
+      <form method="post" id="form-demo" action="/toggle">
+        <input type="submit" style="visibility: hidden"/>
+        <div class="slide-submit">
+          <div class="slide-submit-text">Slide</div>
+          <div class="slide-submit-thumb">»</div>
+        </div>
+      </form>
     </div>
   </body>
 </html>
