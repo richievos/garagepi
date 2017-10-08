@@ -20,13 +20,13 @@ module GaragePi
       # Pin diagram
       # http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/
       RPi::GPIO.set_numbering :board
-      RPi::GPIO.setup @output_pin, :as => :output, :initialize => :low
+      RPi::GPIO.setup @output_pin, :as => :output, :initialize => :high
 
       #####################
       # Synthetic button press
-      RPi::GPIO.set_high @output_pin
-      sleep(button_hold_time)
       RPi::GPIO.set_low @output_pin
+      sleep(button_hold_time)
+      RPi::GPIO.set_high @output_pin
     ensure
       #####################
       # Cleanup
